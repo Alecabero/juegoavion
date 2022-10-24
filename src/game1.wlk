@@ -14,6 +14,7 @@ object juego {
 	game.boardGround("mar.png")
 	game.addVisualCharacter(f14)
 	game.addVisual(enemigo)
+	enemigo. perseguirAF14()
 	
 	  
 }
@@ -69,7 +70,7 @@ object her {
 object enemigo {
 	var property position = game.center()
   method image() = "avene4.png"
-  method position() = game.center()
+  
   method perseguirAF14(){
 		game.onTick(1000,"acercarse",{self.darUnPaso(f14.position())})
 	}
@@ -86,7 +87,7 @@ object enemigo {
 		self.perseguirAF14()
 		
 		}
-	 method position() = position
+	
   
   method teChocoLaBola(){
 		self.desaparecer()
