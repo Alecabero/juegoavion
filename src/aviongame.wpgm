@@ -1,22 +1,14 @@
 import wollok.game.*
 import game1.*
-program avion {
-// límites del juego
-	game.width(20)
-	game.height(20)
-	game.title("f14!")
+
 	
-	// fondo
-	game.boardGround("mar.png")
-	game.addVisualCharacter(f14)
-	game.addVisual(enemigo)
-	
-	  game.onTick(1000, "movimiento",{ enemigo.movete() })
-	keyboard.enter().onPressDo { game1.disparar()}
 		
 	
 
 	// que arranque el juego!
+program juegar{
+	juego.iniciar()
+	
 game.start()
 
 
